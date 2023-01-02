@@ -5,21 +5,17 @@ int main(void){
 	
 	scanf("%d %d %d",&A, &B, &C);
 	
-	if(A == B){
-		if(A == C){
-			sum = 10000 + (A*1000);
-		}
-		else if(A !=C){
-			sum = 1000 + (A * 100);
-		}
+	if(A == B & A == C){
+		sum = 10000 + (A*1000);
 	}
-	else if(B == C){
-		sum = 1000 + (B * 100);
+	else if(A == B & A !=C){
+		sum = 1000 + (A*100);
 	}
-	else if(C == A){
-		if(C != B){
-			sum = 1000 + (C * 100);
-		}
+	else if(A == C & A != B){
+		sum = 1000 + (A*100);
+	}
+	else if(B == C & B != A){
+		sum = 1000 + (B*100);
 	}
 	else {
 		if(A > B & A > C){
